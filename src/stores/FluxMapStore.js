@@ -39,6 +39,10 @@ var invariant = require('invariant');
  */
 class FluxMapStore<K, V> extends FluxReduceStore<Immutable.Map<K, V>> {
 
+  constructor(dispatcher: Dispatcher) {
+    super(dispatcher);
+  }
+  
   getInitialState(): Immutable.Map<K, V> {
     return Immutable.Map();
   }
